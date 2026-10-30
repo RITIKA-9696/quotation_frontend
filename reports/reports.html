@@ -202,10 +202,10 @@
                 <div class="chart-card !py-2 !px-2">
                     <div class="flex items-center gap-1 overflow-x-auto" id="reportTabs">
                         <div class="report-tab active" data-tab="quotation">Quotation Report</div>
-                        <div class="report-tab" data-tab="sales">Sales Report</div>
-                        <div class="report-tab" data-tab="vendor">Vendor Report</div>
+                        <!-- <div class="report-tab" data-tab="sales">Sales Report</div> -->
+                        <!-- <div class="report-tab" data-tab="vendor">Vendor Report</div> -->
                         <div class="report-tab" data-tab="product">Product Report</div>
-                        <div class="report-tab" data-tab="gst">GST Report</div>
+                        <!-- <div class="report-tab" data-tab="gst">GST Report</div> -->
                         <div class="report-tab" data-tab="referral">Referral Income Report</div>
                     </div>
                 </div>
@@ -213,63 +213,61 @@
                 <!-- ============ TAB CONTENT: Quotation Report (default visible) ============ -->
                 <div id="tabContentQuotation" class="tab-content space-y-2.5">
                     <!-- KPI Widgets -->
-                    <div class="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-2.5">
+<div class="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-2.5">
+    <div class="widget-card">
+        <div class="widget-body">
+            <div class="widget-value" id="kpiTotalQuotes">0</div>
+            <div class="widget-label">Total Quotations</div>
+            <div class="widget-trend bg-peach-100 text-peach-600"><i class="fas fa-file-invoice"></i> Period</div>
+        </div>
+        <div class="widget-icon bg-peach-100 text-peach-600"><i class="fas fa-file-invoice"></i></div>
+    </div>
 
-                        <div class="widget-card">
-                            <div class="widget-body">
-                                <div class="widget-value">187</div>
-                                <div class="widget-label">Total Quotations</div>
-                                <div class="widget-trend bg-peach-100 text-peach-600"><i class="fas fa-file-invoice"></i> Period</div>
-                            </div>
-                            <div class="widget-icon bg-peach-100 text-peach-600"><i class="fas fa-file-invoice"></i></div>
-                        </div>
+    <div class="widget-card">
+        <div class="widget-body">
+            <div class="widget-value" id="kpiTotalValue">₹0</div>
+            <div class="widget-label">Total Quotation Value</div>
+            <div class="widget-trend bg-sky-100 text-sky-700"><i class="fas fa-indian-rupee-sign"></i> Period</div>
+        </div>
+        <div class="widget-icon bg-sky-100 text-sky-700"><i class="fas fa-sack-dollar"></i></div>
+    </div>
 
-                        <div class="widget-card">
-                            <div class="widget-body">
-                                <div class="widget-value">₹1.42 Cr</div>
-                                <div class="widget-label">Total Quotation Value</div>
-                                <div class="widget-trend bg-sky-100 text-sky-700"><i class="fas fa-indian-rupee-sign"></i> Period</div>
-                            </div>
-                            <div class="widget-icon bg-sky-100 text-sky-700"><i class="fas fa-sack-dollar"></i></div>
-                        </div>
+    <div class="widget-card">
+        <div class="widget-body">
+            <div class="widget-value" id="kpiAcceptedValue">₹0</div>
+            <div class="widget-label">Accepted Value</div>
+            <div class="widget-trend bg-emerald-100 text-emerald-700"><i class="fas fa-circle-check"></i> Won</div>
+        </div>
+        <div class="widget-icon bg-emerald-100 text-emerald-700"><i class="fas fa-check-double"></i></div>
+    </div>
 
-                        <div class="widget-card">
-                            <div class="widget-body">
-                                <div class="widget-value">₹86.4L</div>
-                                <div class="widget-label">Accepted Value</div>
-                                <div class="widget-trend bg-emerald-100 text-emerald-700"><i class="fas fa-circle-check"></i> Won</div>
-                            </div>
-                            <div class="widget-icon bg-emerald-100 text-emerald-700"><i class="fas fa-check-double"></i></div>
-                        </div>
+    <div class="widget-card">
+        <div class="widget-body">
+            <div class="widget-value" id="kpiConversionRate">0%</div>
+            <div class="widget-label">Conversion Rate</div>
+            <div class="widget-trend bg-emerald-100 text-emerald-700"><i class="fas fa-arrow-up"></i> Rate</div>
+        </div>
+        <div class="widget-icon bg-emerald-100 text-emerald-700"><i class="fas fa-percent"></i></div>
+    </div>
 
-                        <div class="widget-card">
-                            <div class="widget-body">
-                                <div class="widget-value">46.2%</div>
-                                <div class="widget-label">Conversion Rate</div>
-                                <div class="widget-trend bg-emerald-100 text-emerald-700"><i class="fas fa-arrow-up"></i> 3.1%</div>
-                            </div>
-                            <div class="widget-icon bg-emerald-100 text-emerald-700"><i class="fas fa-percent"></i></div>
-                        </div>
+    <div class="widget-card">
+        <div class="widget-body">
+            <div class="widget-value" id="kpiAvgDeal">₹0</div>
+            <div class="widget-label">Avg Deal Size</div>
+            <div class="widget-trend bg-gray-100 text-gray-500"><i class="fas fa-scale-balanced"></i> Avg</div>
+        </div>
+        <div class="widget-icon bg-gray-100 text-gray-500"><i class="fas fa-chart-simple"></i></div>
+    </div>
 
-                        <div class="widget-card">
-                            <div class="widget-body">
-                                <div class="widget-value">₹76,000</div>
-                                <div class="widget-label">Avg Deal Size</div>
-                                <div class="widget-trend bg-gray-100 text-gray-500"><i class="fas fa-scale-balanced"></i> Avg</div>
-                            </div>
-                            <div class="widget-icon bg-gray-100 text-gray-500"><i class="fas fa-chart-simple"></i></div>
-                        </div>
-
-                        <div class="widget-card">
-                            <div class="widget-body">
-                                <div class="widget-value">₹32.8L</div>
-                                <div class="widget-label">Pending Value</div>
-                                <div class="widget-trend bg-amber-100 text-amber-700"><i class="fas fa-hourglass-half"></i> In review</div>
-                            </div>
-                            <div class="widget-icon bg-amber-100 text-amber-700"><i class="fas fa-clock"></i></div>
-                        </div>
-
-                    </div>
+    <div class="widget-card">
+        <div class="widget-body">
+            <div class="widget-value" id="kpiPendingValue">₹0</div>
+            <div class="widget-label">Pending Value</div>
+            <div class="widget-trend bg-amber-100 text-amber-700"><i class="fas fa-hourglass-half"></i> In review</div>
+        </div>
+        <div class="widget-icon bg-amber-100 text-amber-700"><i class="fas fa-clock"></i></div>
+    </div>
+</div>
 
                     <!-- Charts Row -->
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-2.5">
@@ -369,13 +367,33 @@
                     </div>
                 </div>
 
-                <!-- ============ TAB CONTENT: Product Report (placeholder) ============ -->
-                <div id="tabContentProduct" class="tab-content hidden">
-                    <div class="chart-card">
-                        <div class="section-title mb-2">Product Report</div>
-                        <p class="text-gray-500 text-xs">Product report data will appear here.</p>
-                    </div>
-                </div>
+                <!-- ============ TAB CONTENT: Product Report ============ -->
+<div id="tabContentProduct" class="tab-content hidden">
+    <div class="chart-card">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5">
+            <div>
+                <div class="section-title"><i class="fas fa-box mr-1.5 text-peach-500"></i>Product Report</div>
+                <div class="section-sub">Inventory and product catalog</div>
+            </div>
+        </div>
+
+        <div class="table-scope overflow-x-auto">
+            <table class="report-table" id="productTable">
+                <thead>
+                    <tr>
+                        <th>SKU/Code</th>
+                        <th>Product Name</th>
+                        <th>Category</th>
+                        <th>Stock</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="productTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
 
                 <!-- ============ TAB CONTENT: GST Report ============ -->
                 <div id="tabContentGst" class="tab-content hidden">
@@ -439,18 +457,19 @@
 
                         <div class="table-scope overflow-x-auto">
                             <table class="report-table" id="referralTable">
-                                <thead>
-                                    <tr>
-                                        <th data-key="referrerName">Referrer Name <i class="fas fa-sort sort-icon"></i></th>
-                                        <th data-key="referredCustomer">Referred Customer <i class="fas fa-sort sort-icon"></i></th>
-                                        <th data-key="quotationAmount">Quotation Amount <i class="fas fa-sort sort-icon"></i></th>
-                                        <th data-key="referralPercent">Referral % <i class="fas fa-sort sort-icon"></i></th>
-                                        <th data-key="referralAmount">Referral Amount <i class="fas fa-sort sort-icon"></i></th>
-                                        <th data-key="status">Status <i class="fas fa-sort sort-icon"></i></th>
-                                    </tr>
-                                </thead>
-                                <tbody id="referralTableBody"></tbody>
-                            </table>
+    <thead>
+        <tr>
+            <th data-key="referrerName">Referrer Name <i class="fas fa-sort sort-icon"></i></th>
+            <th data-key="referredCustomer">Referred Customer <i class="fas fa-sort sort-icon"></i></th>
+            <th data-key="quotationAmount">Quotation Amount <i class="fas fa-sort sort-icon"></i></th>
+            <th data-key="referralPercent">Referral % <i class="fas fa-sort sort-icon"></i></th>
+            <th data-key="referralAmount">Referral Amount <i class="fas fa-sort sort-icon"></i></th>
+            <th data-key="status">Status <i class="fas fa-sort sort-icon"></i></th>
+            <th data-key="partnerName" id="thReferralPartner" class="hidden">Channel Partner <i class="fas fa-sort sort-icon"></i></th>
+        </tr>
+    </thead>
+    <tbody id="referralTableBody"></tbody>
+</table>
                         </div>
 
                         <div class="table-foot flex flex-wrap items-center justify-between gap-2 mt-2.5 pt-2.5">
@@ -459,6 +478,8 @@
                         </div>
                     </div>
                 </div>
+
+
 
             </div>
         </main>

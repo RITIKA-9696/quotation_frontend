@@ -180,11 +180,13 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
               <div class="field-group">
                 <label class="field-label" for="fCustomer">Customer</label>
-                <input type="text" id="fCustomer" class="field-input" placeholder="Customer name">
+                <input type="text" id="fCustomer" list="customerList" class="field-input" placeholder="Customer name" autocomplete="off">
+<datalist id="customerList"></datalist>
               </div>
               <div class="field-group">
                 <label class="field-label" for="fProject">Project</label>
-                <input type="text" id="fProject" class="field-input" placeholder="Project name">
+                <input type="text" id="fProject" list="projectList" class="field-input" placeholder="Project name" autocomplete="off">
+<datalist id="projectList"></datalist>
               </div>
               <div class="field-group">
                 <label class="field-label" for="fCapacity">System Capacity (kW)</label>
